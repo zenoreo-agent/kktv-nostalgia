@@ -1,0 +1,21 @@
+/* Replace LINE TV green with KKTV red */
+:root {
+    --primary-color: #b40f42 !important;
+    --bg-color: #222222 !important;
+    --border-radius: 4px !important;
+}
+
+body {
+    background-color: var(--bg-color) !important;
+}
+
+/* Button overrides */
+button, .btn {
+    background-color: var(--primary-color) !important;
+    border-radius: var(--border-radius) !important;
+}
+
+/* Link overrides */
+a {
+    color: var(--primary-color) !important;
+}

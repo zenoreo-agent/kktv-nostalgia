@@ -2,12 +2,13 @@
 
 :root {
     --kktv-pink: #b40f42;
-    --kktv-pink-hover: #d11c54;
-    --kktv-bg-dark: #222222;
-    --kktv-bg-card: #333333;
-    --kktv-radius: 4px;
+    --kktv-pink-hover: #f0486e;
+    --kktv-bg-dark: #151515;
+    --kktv-bg-card: #222222;
+    --kktv-radius: 8px;
     --kktv-text-main: #ffffff;
     --kktv-text-dim: #cccccc;
+    --kktv-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
 }
 
 /* Global Background */
@@ -46,6 +47,7 @@ body,
 .btn--primary:hover,
 [class*="button"]:hover {
     background-color: var(--kktv-pink-hover) !important;
+    box-shadow: 0 0 10px rgba(240, 72, 110, 0.4) !important;
 }
 
 /* Cards & Thumbnails */
@@ -54,15 +56,26 @@ body,
 .keen-slider__slide {
     border-radius: var(--kktv-radius) !important;
     overflow: hidden !important;
+    background-color: var(--kktv-bg-card) !important;
+    box-shadow: var(--kktv-shadow) !important;
+    transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+[class*="Card"]:hover,
+[class*="Poster"]:hover,
+.keen-slider__slide:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.7) !important;
 }
 
 /* Navigation & Footer */
 header, 
 footer,
 [class*="Header"],
-[class*="Footer"] {
-    background-color: var(--kktv-bg-dark) !important;
-    border-color: rgba(255,255,255,0.1) !important;
+[class*="Footer"],
+[class*="Section"] {
+    background-color: var(--kktv-bg-card) !important;
+    border-color: rgba(255,255,255,0.05) !important;
 }
 
 .text-linetv-high-emphasis {

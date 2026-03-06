@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "KKTV Nostalgia",
+  "version": "1.0",
+  "description": "Bring back the KKTV feel to LINE TV.",
+  "content_scripts": [
+    {
+      "matches": ["*://*.linetv.tw/*"],
+      "css": ["styles.css"],
+      "js": ["content.js"]
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+/* KKTV Nostalgia - Core Style Overrides */
+
+:root {
+    --kktv-pink: #b40f42;
+    --kktv-pink-hover: #f0486e;
+    --kktv-bg-dark: #151515;
+    --kktv-bg-card: #222222;
+    --kktv-radius: 8px;
+    --kktv-text-main: #ffffff;
+    --kktv-text-dim: #cccccc;
+    --kktv-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* Global Background */
+body, 
+#root, 
+#__next, 
+.bg-linetv-background {
+    background-color: var(--kktv-bg-dark) !important;
+    color: var(--kktv-text-main) !important;
+}
+
+/* Primary Color Mapping (Replacing LINE TV Green) */
+.text-linetv-primary,
+[class*="hover:text-linetv-primary"]:hover,
+.ChannelListMenu__StyledRouterLink-sc-dmpk2z-4:hover {
+    color: var(--kktv-pink) !important;
+}
+
+.bg-linetv-primary,
+.BannerSliderRWD__PaginationBullet-sc-1yc5br4-1[style*="background-color: rgb(0, 195, 0)"],
+[class*="bg-linetv-primary"] {
+    background-color: var(--kktv-pink) !important;
+}
+
+/* Buttons */
+.btn--primary,
+.mobile-footer-login__button,
+[class*="button"],
+[class*="btn"] {
+    background-color: var(--kktv-pink) !important;
+    border-radius: var(--kktv-radius) !important;
+    color: #fff !important;
+    border: none !important;
+}
+
+.btn--primary:hover,
+[class*="button"]:hover {
+    background-color: var(--kktv-pink-hover) !important;
+    box-shadow: 0 0 10px rgba(240, 72, 110, 0.4) !important;
+}
+
+/* Cards & Thumbnails */
+[class*="Card"],
+[class*="Poster"],
+.keen-slider__slide {
+    border-radius: var(--kktv-radius) !important;
+    overflow: hidden !important;
+    background-color: var(--kktv-bg-card) !important;
+    box-shadow: var(--kktv-shadow) !important;
+    transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+[class*="Card"]:hover,
+[class*="Poster"]:hover,
+.keen-slider__slide:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.7) !important;
+}
+
+/* Navigation & Footer */
+header, 
+footer,
+[class*="Header"],
+[class*="Footer"],
+[class*="Section"] {
+    background-color: var(--kktv-bg-card) !important;
+    border-color: rgba(255,255,255,0.05) !important;
+}
+
+.text-linetv-high-emphasis {
+    color: var(--kktv-text-main) !important;
+}
+
+.text-linetv-medium-emphasis,
+.text-linetv-low-emphasis {
+    color: var(--kktv-text-dim) !important;
+}
+
+/* Logo specific text */
+span[class*="Logo"] {
+    color: var(--kktv-pink) !important;
+}
